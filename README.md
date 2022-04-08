@@ -5,7 +5,7 @@
 
 ### Example Data Model
 
-![alt text]('//public/images/Model.png')
+![alt text](//public/images/Model.png)
 
 
 
