@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <% if (user) { %>
+            <a href="/recipes/new" <%- title === 'Add Recipe' ? 'class="active"' : '' %>>ADD RECIPE</a>
+            <a href="/logout">LOG OUT</a> 
+    </nav>
+
+    <table id="list">
+        <thead>
+          <tr>
+            <th>Recipe</th>
+            <br>
+            <th>name</th>
+            <br>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% recipes.forEach(function(r) { %>
+            <tr>
+              <td><%= r.img %></td>
+              <td><%= r.recipeName %></td>
+              <td><a href="/recipes/<%= r._id %>">DETAILS</a></td>
+            </tr>
+            <% }); %>
+
+            <% } else { %>
+                <a href="/auth/google" class="login">LOG IN&nbsp;</a>
+              <% } %>
+              <div>
+              <a href="/recipes" <%- title === 'All Recipes' ? 'class="active"' : '' %>>ALL RECIPES</a>
+              </div>
+          </tbody>
+        </table>
+</body>
+</html>
