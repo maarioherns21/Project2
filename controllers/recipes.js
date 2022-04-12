@@ -31,12 +31,16 @@ function index(req, res) {
 
 
 function create(req, res) {
+
     const recipe = new Recipe(req.body);
     recipe.save(function (err) {
-      console.log(err, " this err");
+      
+        console.log(err, " this err");
+
       if (err) return res.redirect("/recipes/new");
-      console.log(flight);
+      
+
   
-      res.redirect("/recipes");
+      res.redirect(`/recipes/${recipe._id}`);
     });
   }

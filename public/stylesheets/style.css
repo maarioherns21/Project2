@@ -1,20 +1,62 @@
-.brand-logo {
-  margin-left: 15px;
+
+/* Custom default button */
+/* #mains {
+  position:relative;
+  background-image: url(http://assets.bounceexchange.com/assets/uploads/clients/2602/creatives/2b557ede775e048417c57845f6b0f8b3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
 }
 
-#search-row form {
-  padding-top: 20px;
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.student-name {
-  position: relative;
-  top: -5px;
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
 }
 
-.collection-item form {
-  margin-top: -5px;
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+#mainbtn {
+  color: black;
+}
+
+#new-form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#new-form *,  #add-review-form * {
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#new-form input[type="submit"] {
+  grid-column: span 2;
+  width: 10rem;
+  margin-left: auto;
 }

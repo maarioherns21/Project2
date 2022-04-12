@@ -17,8 +17,8 @@ const reviewSchema = new Schema({
 
 const recipeSchema = new Schema({
     recipeName: String,
-    prepTime: {type: Boolean, defualt: false},
-    cookTime: {type: Boolean, defualt: false},
+    prepTime: {type: Number, defualt: false},
+    cookTime: {type: Number, defualt: false},
     img: { data: Buffer, contentType: String },
     recipeIngredients: String,
     recipeContent: String,

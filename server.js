@@ -9,6 +9,7 @@ const methodOverride = require("method-override");
 const indexRoutes = require("./routes/index");
 const recipesRoutes = require("./routes/recipes");
 const reviewsRoutes = require("./routes/reviews");
+const mainsRoutes = require("./routes/mains")
 // load the env consts
 require("dotenv").config();
 
@@ -50,6 +51,7 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
+app.use("/", mainsRoutes)
 app.use("/recipes", recipesRoutes);
 app.use("/", reviewsRoutes);
 app.use("/", indexRoutes);
