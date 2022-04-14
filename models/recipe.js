@@ -19,7 +19,7 @@ const recipeSchema = new Schema({
     recipeName: String,
     prepTime: {type: Number, defualt: false},
     cookTime: {type: Number, defualt: false},
-    img: { data: Buffer, contentType: String },
+    img: { data: Buffer, contentType: String, require: false },
     recipeInfo: String,
     recipeIngredients: String,
     recipeContent: String,
