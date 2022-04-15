@@ -33,20 +33,20 @@ function deleteReview(req, res, next){
 
 function create(req, res){
 	// two things we need to know from the request?
-	// req.params.id = id of the movie we want to tadd the review to
+	// req.params.id = id of the recipe we want to tadd the review to
 	// req.body - contents of the form, which is the review we want to add to the movie
 	//
 	// console.log(req.params.id)
 	// res.send('hello im hitting the create route in the reviews change me later')
-	// Find the movie from the database
-	// Movie.findById is a mongoose Method
+	// Find ther recipe from the database
+	// recipe.findById is a mongoose Method
 	Recipe.findById(req.params.id, function(err, recipeFromTheDatabase) {
  
 		///ADD THE USER-CENTRIC INGFO TO REQ.BODY
 		req.body.user = req.user._id;
 		req.body.userName =  req.user.name;
 		req.body.userAvatar = req.user.avatar;
-		// add the review (req.body) to the movieFromTheDatabase
+		// add the review (req.body) to the recipeFromTheDatabase
 		recipeFromTheDatabase.reviews.push(req.body); // mutating a document 
 		// we have to tell mongodb we changed the document, 
 		recipeFromTheDatabase.save(function(err){
@@ -57,10 +57,6 @@ function create(req, res){
 		})
 
 	})
-		
-	// res.send('hello')
-	
-	// 
-	
+
 
 }

@@ -11,6 +11,8 @@ const recipesRoutes = require("./routes/recipes");
 const reviewsRoutes = require("./routes/reviews");
 const mainsRoutes = require("./routes/mains");
 const imagesRouters = require("./routes/images");
+const uploadRouter = require('./routes/upload-route');
+
 // load the env consts
 require("dotenv").config();
 
@@ -52,6 +54,7 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
+app.use("/", uploadRouter);
 app.use("/", imagesRouters);
 app.use("/", mainsRoutes);
 app.use("/recipes", recipesRoutes);

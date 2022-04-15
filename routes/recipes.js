@@ -6,15 +6,15 @@ const isLoggedIn = require('../config/auth')
 // app.use('/movies', moviesRouter);
 
 // THis matches the URL
-//movies
+//recipes
 router.get('/', recipesCtrl.index);
 
-// GET /movies/new
+// GET /recipes/new
 router.get('/new', isLoggedIn ,recipesCtrl.new);
 
-//movies/1303727424
+//recipes/1303727424
 router.get('/:id', recipesCtrl.show);
-// POST /movies
+// POST /recipes
 router.post('/', recipesCtrl.create);
 
 
