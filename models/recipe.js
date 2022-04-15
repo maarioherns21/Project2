@@ -24,6 +24,7 @@ const recipeSchema = new Schema({
     recipeIngredients: String,
     recipeContent: String,
     reviews: [reviewSchema],
+    url: {type: String}
   }, 
   { timestamps: true}
   );

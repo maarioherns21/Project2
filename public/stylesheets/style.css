@@ -91,7 +91,8 @@ svg text {
     background-color: rgba(57, 62, 93, 0.7);
     padding: 0;
     overflow: hidden;
-    max-width: 460px;
+    max-width: 450px;
+    max-height: 700px;
   }
   
   .container_foto article {
@@ -107,9 +108,9 @@ svg text {
   }
   
   .container_foto h2 {
-    color: #fff;
-    font-weight: 800;
-    font-size: 25px;
+    color: rgb(27, 27, 27);
+    font-weight: 730;
+    font-size: 28px;
     border-bottom: #fff solid 1px;
   }
   
