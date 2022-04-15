@@ -5,9 +5,16 @@
 
 ### Example Data Model
 
-![This is an image](//public/images/Model.png)
+https://lucid.app/lucidchart/0c2d4a2b-7113-4204-9937-0ed475c4b6c9/edit?page=0_0&invitationId=inv_b0a82bfd-9b36-456e-9844-92f6e284d374#
 
 
+### Wireframe
+
+https://www.figma.com/file/hrjPytnAfEJgLI1fabAjhh/Project-2?node-id=0%3A1
+
+### Trello
+ 
+https://trello.com/b/JSX4Cena/project2
 
 ### RELATIONSHIPS
 A user has many recipes(userRecipes)/ a recipe belongs to a User.
@@ -33,12 +40,10 @@ Each review and rating needs to know the user that submitted it. not just for di
 |HTTP<br>Method|URL<br>Endpoint|Controller<br>Action|Purpose|
 |---|---|---|---|
 | GET | /recipes | recipesCtrl.index | View all the recipes submitted by the logged in user|
-| GET | /recipes/all | recipesCtrl.allrecipes | View all the recipes regardless of who submitted (use querystring params to perform filtering) |
+| GET | /recipes/mains | recipesCtrl.allrecipes | View all the recipes regardless of who submitted (use querystring params to perform filtering) |
 | GET | /recipes/:id | recipesCtrl.show | View the details of any recipes |
 | GET | /recipes/new | recipesCtrl.new | View a form for submitting a recipes (be sure to define this route before the show route)|
 | POST | /recipes | recipesCtrl.create | Handle the new recipe form being submitted |
-| GET | /recipes/:id/edit | recipesCtrl.edit | View a form for editing a recipes (restrict to user who submitted the recipes) |
-| PUT | /recipes/:id| recipesCtrl.update | Handle the edit recipe form being submitted (restrict to user who submitted the recipes) |
 | DELETE | /recipes/:id| recipesCtrl.delete | Delete a recipes(restrict to user who submitted the book) |
 
 #### Reviews
