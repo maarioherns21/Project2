@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Image = require('../models/recipe')
+const Image = require("../models/recipe");
 
 /* GET home page. */
 //define storage for the images
