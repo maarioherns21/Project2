@@ -28,8 +28,14 @@ router.get(
 
 // OAuth logout route
 router.get("/logout", function (req, res) {
-  req.logout();
-  res.redirect("/recipes");
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/recipes');
+  });
 });
+// router.get("/logout", function (req, res) {
+//   req.logout();
+//   res.redirect("/recipes");
+// });
 
 module.exports = router;
